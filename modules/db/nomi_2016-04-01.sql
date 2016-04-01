@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.28)
 # Database: nomi
-# Generation Time: 2016-04-01 12:26:36 +0000
+# Generation Time: 2016-04-01 12:49:55 +0000
 # ************************************************************
 
 
@@ -55,15 +55,6 @@ CREATE TABLE `Item` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `Item` WRITE;
-/*!40000 ALTER TABLE `Item` DISABLE KEYS */;
-
-INSERT INTO `Item` (`id`, `vendor_id`, `date`, `name`, `description`, `price`, `url`, `image_url`, `weight`, `category`, `subcategory`)
-VALUES
-	(1,1,'2016-02-18','Нью-Йорк','Бургер з котлетою зі свинини та телятини, листям салату Айсберг, свіжими томатами, карамелізованою кримською цибулею, сиром Моцарела, соусом Цезар. Подається з хрусткою картоплею смаженою у фритюрі з кетчупом.',48.00,'http://cookdrive.com.ua/products/view/nyu-york.html','http://cookdrive.com.ua/var/catalog/products/55df88243fe10.png',NULL,NULL,NULL);
-
-/*!40000 ALTER TABLE `Item` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table Orders
@@ -100,17 +91,6 @@ CREATE TABLE `User` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `User` WRITE;
-/*!40000 ALTER TABLE `User` DISABLE KEYS */;
-
-INSERT INTO `User` (`id`, `is_valid`, `username`, `email`, `password`, `balance`, `avatar`, `adminRole`, `authKey`)
-VALUES
-	(29,1,'admin','vborshak@chegg.com','123456',0.00,'21232f297a57a5a743894a0e4a801fc3-ava.png',1,NULL),
-	(31,0,'','newuser@chegg.com','123',0.00,NULL,0,NULL),
-	(32,0,'дядя вася','vasya@chegg.com','123',0.00,NULL,0,NULL);
-
-/*!40000 ALTER TABLE `User` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table Vendor
@@ -128,15 +108,6 @@ CREATE TABLE `Vendor` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `Vendor` WRITE;
-/*!40000 ALTER TABLE `Vendor` DISABLE KEYS */;
-
-INSERT INTO `Vendor` (`id`, `name`, `url`, `phone`, `email`, `logo`)
-VALUES
-	(1,'CookDrive','http://cookdrive.com.ua','067 311-11-91','',NULL);
-
-/*!40000 ALTER TABLE `Vendor` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 
