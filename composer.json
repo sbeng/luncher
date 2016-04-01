@@ -1,0 +1,5 @@
+{
+    "require": {
+        "omnilight/yii2-shopping-cart": "*"
+    }
+}
